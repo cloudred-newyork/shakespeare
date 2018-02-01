@@ -1,0 +1,123 @@
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+	"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+	<meta http-equiv="Content-type" content="text/html; charset=utf-8">
+	<title>Shakespeare at the Delacorte | A visualization created by Cloudred</title>
+	<meta name="author" content="Cloudred" />
+	<meta name="copyright" content="2015 Cloudred. All Rights Reserved." />
+    <meta name="description" content="The Public Theater has staged Shakespeare in the Park since 1962. Here&#8217;s a visualization of all plays, great performers, and accomplished directors.">
+    
+    <meta property="og:image" content="http://www.cloudred.com/labprojects/shakespeare/images/delacorte-shakespeare-cloudred.jpg" />
+    <meta property="og:image:type" content="image/jpeg" />
+    <meta property="og:image:width" content="600" />
+    <meta property="og:image:height" content="357" />
+
+	<link href="css/normalize.css" rel="stylesheet" type="text/css">
+	<link href="//cloud.typography.com/767508/628768/css/fonts.css" rel="stylesheet" type="text/css" />
+	<link href="css/main.css" rel="stylesheet" type="text/css">
+    <script src="js/vendor/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="//wurfl.io/wurfl.js"></script>
+    <script type="text/javascript">
+		if(WURFL.is_mobile){
+			window.location.assign("mobile.html")
+		}
+	</script>
+	<script type="text/javascript" src="js/vendor/raphael.js"></script>
+	<script type="text/javascript" src="js/main.js"></script>
+	<script type="text/javascript" src="js/defaults.js"></script>
+	<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-553fe2f26c9400ba" async="async"></script>
+    <script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','//www.google-analytics.com/analytics.js','ga');ga('create', 'UA-1356890-1', 'auto');ga('send', 'pageview');</script>
+
+</head>
+<body class="actor">
+	<div id="infoBox" class="closed">
+		<div class="toggle"></div>
+		<div id="about">
+			<div class="content">
+				<h3>About</h3>
+				<p>We were interested in visualizing a complex data set of productions, characters, actors in a non-linear time based format. We wanted to create an engaging interface that would allow you to view who&#8217;s played iconic Shakespearean characters like Beatrice (Much Ado…), Lear, or Hamlet and also see key actors who have starred in multiple productions.</p>
+				<p>We were also curious about the plays. What were some of the more popular plays? Which genres dominate?</p>
+                <p>After 12 (!) design layout variations, hours of data collection and creative coding, we present an interactive homage to this great summertime institution. <a href="http://cloudred.com/contact" target="_blank">Any feedback? Please email us.</a></p>
+                <p>Visual Design &amp; Interaction:<br/> Allen Yee &amp; Cyril Tsiboulski<br/> Programming: Cristian Zapata </p>
+                <p>Libraries: <a href="http://raphaeljs.com/" target="_blank">raphaël</a>, <a href="https://jquery.com/" target="_blank">jQuery</a>, <a href="https://html5boilerplate.com/" target="_blank">HTML5 Boilerplate</a></p>
+                <p>Data sources: <a href="http://www.lortel.org/lla_archive/index.cfm?search_by=theater&id=250" target="_blank">Lortel Archives</a>, <a href="http://stormville.blogspot.com/2009/06/delacorte-theater-in-central-park.html" target="_blank">Delacorte Theater in Central Park&#8230;</a>, <a href="http://www.nytimes.com/ref/membercenter/nytarchive.html" target="_blank">New York Times Archives</a>, <a href="https://www.google.com/imghp?gws_rd=ssl" target="_blank">Google Images</a> </p>
+                <p>Layout inspiration: <a href="http://sverigesradio.se/diverse/appdata/isidor/files/1646/melodifestivalen/index.html" target="_blank">Eleven years of songwriting mapped</a></p>
+			</div>
+		</div>
+		<div id="notableCharacters">
+			<div class="content">
+				<h3>Notable Characters</h3>
+				<p>We&#8217;ve selected some notable characters as visualization starters. A tooltip displays for the most recent actor &amp; role.</p>
+				<ul>
+					<li rel="26">Beatrice</li>
+                    <li rel="6">Hamlet</li>
+                    <li rel="7">Iago</li>
+                    <li rel="19">Juliet</li>
+                    <li rel="30">Katherine</li>
+                    <li rel="2">Lear, King of Britain</li>
+                    <li rel="20">Olivia</li>
+                    <li rel="7">Othello</li>
+                    <li rel="0">Portia</li>
+                    <li rel="1">Prospero</li>
+                    <li rel="13">Richard III</li>                    
+                    <li rel="19">Romeo</li>
+                    <li rel="4">Rosalind</li>
+					<li rel="0">Shylock</li>
+                    <li rel="20">Viola</li>
+				</ul>
+			</div>
+
+		</div>
+	</div>
+	<div id="productionLegend" class="open">
+		<div class="toggle"></div>
+		<div class="title">
+			<h3>Productions legend:</h3>
+		</div>
+		<ul>
+			<li class="comedies cf">
+				<span class="legend"></span><span>Comedies</span> 
+			</li>
+
+			<li class="problem cf">
+				<span class="legend"></span><span>Problem plays</span> 
+			</li>
+
+			<li class="histories cf">
+				<span class="legend"></span><span>Histories</span> 
+			</li>
+
+			<li class="tragedies cf">
+				<span class="legend"></span><span>Tragedies</span> 
+			</li>
+		</ul>
+	</div>
+
+	<header>
+		<h1>Shakespeare at the Delacorte Theater</h1>
+		<h2>The Public Theater has staged Shakespeare in the Park since 1962&#8212;one of New York City&#8217;s most beloved summer traditions. Here&#8217;s a visualization of all plays, great performers, and accomplished directors.</h2>
+		<div id="viewToggle">
+			<div class="label">View:</div>
+			<div class="toggle mode-actor"><span class="actor">Actor</span><span class="production">Production</span></div>
+		</div>
+
+	</header>
+
+<div id="footer"><div>&copy; 2015 <a href="http://cloudred.com" target="_blank">Cloudred</a>. All Rights Reserved.</div></div>
+<div id="vizContent">
+	<div id="basePop" class="cf infoContainer">
+		<div class="contents">
+			<div class="title">fds</div>
+			<div class="prod">fds</div>
+			<div class="year">fds</div>
+			<div class="role">sfd</div>
+		</div>
+	</div>
+	<div class="yearCount"><span>5</span>x</div>
+	
+</div>
+</body>
+</html>

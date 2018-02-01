@@ -1,0 +1,875 @@
+/*
+ * HTML5 Boilerplate
+ *
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+
+html,
+button,
+input,
+select,
+textarea {
+    color: #222;
+}
+
+body {
+    font-size: 1em;
+    line-height: 1.4;
+}
+
+/*
+ * Remove text-shadow in selection highlight: h5bp.com/i
+ * These selection rule sets have to be separate.
+ * Customize the background color to match your design.
+ */
+
+::-moz-selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+/*
+ * A better looking default horizontal rule
+ */
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+/*
+ * Remove the gap between images and the bottom of their containers: h5bp.com/i/440
+ */
+
+img {
+    vertical-align: middle;
+}
+
+/*
+ * Remove default fieldset styles.
+ */
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+
+textarea {
+    resize: vertical;
+}
+
+/* ==========================================================================
+   Chrome Frame prompt
+   ========================================================================== */
+
+.chromeframe {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+body, html {
+    background: #eeeeee;
+    color: #222;
+    margin: 0;
+    padding: 0;
+    font-family: "Helvetica";
+}
+
+
+a:link {color:#ef4135; text-decoration:none}      /* unvisited link */
+a:visited {color:#ef4135; text-decoration:none}  /* visited link */
+a:hover {color:#7570b3; text-decoration:none}  /* mouse over link */
+a:active {color:#7570b3; text-decoration:none}  /* selected link */
+
+header {
+    position: relative;
+    z-index: 100;
+    padding-top: 40px;
+    padding-left: 55px;
+}
+header h1 {
+    margin: 0;
+    font-size: 40px;
+    text-transform:uppercase;
+    font-family: 'Knockout 91 A', 'Knockout 91 B';
+    font-weight:normal;
+    line-height:42px;
+} 
+header h2 {
+    margin: 0;
+    font-size: 18px;
+    font-weight: normal;
+    font-family: 'Knockout 31 A', 'Knockout 31 B';
+    width: 940px;
+    line-height:20px;
+}
+header #viewToggle {
+    position: absolute;
+    left: 55px;
+    bottom: -50px;
+    width: 200px;
+}
+header #viewToggle * {
+    vertical-align: middle;
+    display: inline-block;
+    float: left;
+    font-size: 12px;
+    font-weight: bold;
+    font-family: "Helvetica-Nue", "Helvetica";
+}
+header #viewToggle .label {
+    margin-right: 5px;
+    line-height: 30px;
+}
+header #viewToggle .toggle {
+    background: #dc5945;
+    border-radius: 3px;
+    padding: 3px;
+    -moz-box-shadow:    inset 2px 2px 5px rgba(0,0,0,0.2);
+    -webkit-box-shadow: inset 2px 2px 5px rgba(0,0,0,0.2);
+    box-shadow:         inset 2px 2px 5px rgba(0,0,0,0.2);
+}
+
+header #viewToggle .toggle span {
+    padding: 4px 10px 3px ;
+    color: #ff9d96;
+    cursor: pointer;
+}
+header #viewToggle .toggle.mode-actor .actor,
+header #viewToggle .toggle.mode-production .production {
+    border-radius: 3px;
+    padding: 3px 12px;
+    color: #494723;
+    border-top: 1px solid #f8fafa;
+    -moz-box-shadow:    0px 0px 2px rgba(0,0,0,0.4);
+    -webkit-box-shadow: 0px 0px 2px rgba(0,0,0,0.4);
+    box-shadow:         0px 0px 2px rgba(0,0,0,0.4);
+    cursor: default;
+    background: #ebeff0; /* Old browsers */
+    background: -moz-linear-gradient(top,  #ebeff0 0%, #e0e6e8 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ebeff0), color-stop(100%,#e0e6e8)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top,  #ebeff0 0%,#e0e6e8 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top,  #ebeff0 0%,#e0e6e8 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top,  #ebeff0 0%,#e0e6e8 100%); /* IE10+ */
+    background: linear-gradient(to bottom,  #ebeff0 0%,#e0e6e8 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ebeff0', endColorstr='#e0e6e8',GradientType=0 ); /* IE6-9 */
+
+}
+
+
+
+#infoBox {
+    position: absolute;
+    top: 60px;
+    right: 40px;
+    z-index: 800;
+}
+
+#infoBox .toggle {
+    width: 44px;
+    height: 44px;
+    background: url(sprite.png);
+    cursor: pointer;
+    position: absolute;
+    right: 0;
+}
+
+#infoBox.open .toggle {
+    background-position: 0 -44px;
+}
+#infoBox #notableCharacters,
+#infoBox #about {
+    display: none;
+}
+
+/*#infoBox.open #notableCharacters,
+#infoBox.open #about {
+    display: block;
+    height: auto;
+}*/
+
+#infoBox #notableCharacters,
+#infoBox #about {
+    background: rgba(238,238,238,0.95);
+    border: 2px solid #ef4135;
+    font-family: 'Knockout 31 A', 'Knockout 31 B';
+    font-weight:normal;
+    line-height:normal;
+
+}
+
+#infoBox .content {
+    padding: 15px;
+    font-size: 18px;
+}
+#infoBox .content h3 {
+    margin: 0;
+    font-size: 24px;
+    font-family: 'Knockout 91 A', 'Knockout 91 B';
+    font-weight: 400;
+    font-style: normal;
+}
+#infoBox .content p {
+    margin: .5em 0;
+}
+#infoBox #about {
+    position: absolute;
+    right: 42px;
+    width: 334px;
+}
+
+#infoBox #notableCharacters {
+    position: absolute;
+    right: 378px;
+    width: 334px;
+}
+#infoBox #notableCharacters ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    color: #ef4135;
+
+}
+#infoBox #notableCharacters ul li:before {
+    content: "> ";
+} 
+.production #infoBox #notableCharacters {
+    display: none;
+}
+#notableCharacters li:hover {
+    cursor: pointer;
+    color: #7570b3;
+}
+.actor #productionLegend {
+    display: none;
+}
+#productionLegend {
+    background: rgba(238,238,238,0.90);
+    position: absolute;
+    left: -288px;
+    bottom: 55px;
+    z-index: 999;
+    width: 288px;
+    font-family: 'Knockout 29 A', 'Knockout 29 B';
+    -webkit-transition: all .4s ease;
+    -moz-transition: all .4s ease;
+    -ms-transition: all .4s ease;
+    -o-transition: all .4s ease;
+    transition: all .4s ease;
+}
+#productionLegend.open {
+    left: 0px;
+} 
+
+#productionLegend .toggle {
+    width: 35px;
+    height: 35px;
+    background: url(sprite.png) -44px -35px rgba(238,238,238,0.90);
+    cursor: pointer;
+    position: absolute;
+    right: -33px;
+}
+
+#productionLegend.open .toggle {
+    background-position: -44px 0;
+}
+#productionLegend .title {
+    border: 2px solid white;
+    border-bottom: 0;
+    border-left: 0;
+}
+#productionLegend .title h3 {
+    margin: 0;
+    padding: 20px 22px 18px;
+}
+#productionLegend ul {
+    border-right: 2px solid white;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+#productionLegend li {
+    border-top: 2px solid white;
+    line-height: 31px;
+    padding-left: 22px;
+    font-size: 18px;
+    position: relative;
+}
+#productionLegend li .legend {
+    display: block;
+    background: red;
+    width: 58px;
+    height: 31px;
+    margin-right: 7px;
+    border-left: 2px solid white;
+    border-right: 2px solid white;
+}
+#productionLegend li span {
+    display: inline-block;
+    height: 31px;
+    float: left;
+}
+
+
+#productionLegend li.comedies {
+    color: #fdb012;
+}
+#productionLegend li.comedies .legend  {
+    background-color: #fdb012;
+}
+
+#productionLegend li.problem {
+    color: #f0564a;
+}
+#productionLegend li.problem .legend  {
+    background-color: #f0564a;
+}
+
+#productionLegend li.histories {
+    color: #ef1e55;
+}
+#productionLegend li.histories .legend  {
+    background-color: #ef1e55;
+}
+
+#productionLegend li.tragedies {
+    color: #d3a1bc;
+}
+#productionLegend li.tragedies .legend  {
+    background-color: #d3a1bc;
+}
+
+#vizContent {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+#footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 800;
+    color: black;
+    font-size: 0.75em;
+    padding: 18px 0;
+    width: 100%;
+    border-top: 2px solid #fff;
+    background: rgba(238,238,238,0.85);
+}
+#footer div {
+    padding-left: 18px;
+}
+
+/*
+    knockout50_welterweight
+    knockout29_junior_liteweight
+    numbersredbird
+*/
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+/*
+ * Image replacement
+ */
+
+.ir {
+    background-color: transparent;
+    border: 0;
+    overflow: hidden;
+    /* IE 6/7 fallback */
+    *text-indent: -9999px;
+}
+
+.ir:before {
+    content: "";
+    display: block;
+    width: 0;
+    height: 150%;
+}
+
+/*
+ * Hide from both screenreaders and browsers: h5bp.com/u
+ */
+
+.hidden {
+    display: none !important;
+    visibility: hidden;
+}
+
+/*
+ * Hide only visually, but have it available for screenreaders: h5bp.com/v
+ */
+
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+/*
+ * Extends the .visuallyhidden class to allow the element to be focusable
+ * when navigated to via the keyboard: h5bp.com/p
+ */
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+}
+
+/*
+ * Hide visually and from screenreaders, but maintain layout
+ */
+
+.invisible {
+    visibility: hidden;
+}
+
+/*
+ * Clearfix: contain floats
+ *
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    `contenteditable` attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that receive the `clearfix` class.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+
+.cf:before,
+.cf:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.cf:after {
+    clear: both;
+}
+
+/*
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+
+.cf {
+    *zoom: 1;
+}
+
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   These examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+
+@media only screen and (min-width: 35em) {
+    /* Style adjustments for viewports that meet the condition */
+}
+
+@media print,
+       (-o-min-device-pixel-ratio: 5/4),
+       (-webkit-min-device-pixel-ratio: 1.25),
+       (min-resolution: 120dpi) {
+    /* Style adjustments for high resolution devices */
+}
+
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid required HTTP connection: h5bp.com/r
+   ========================================================================== */
+
+@media print {
+    * {
+        background: transparent !important;
+        color: #000 !important; /* Black prints faster: h5bp.com/s */
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+
+    a,
+    a:visited {
+        text-decoration: underline;
+    }
+
+    a[href]:after {
+        content: " (" attr(href) ")";
+    }
+
+    abbr[title]:after {
+        content: " (" attr(title) ")";
+    }
+
+    /*
+     * Don't show links for images, or javascript/internal links
+     */
+
+    .ir a:after,
+    a[href^="javascript:"]:after,
+    a[href^="#"]:after {
+        content: "";
+    }
+
+    pre,
+    blockquote {
+        border: 1px solid #999;
+        page-break-inside: avoid;
+    }
+
+    thead {
+        display: table-header-group; /* h5bp.com/t */
+    }
+
+    tr,
+    img {
+        page-break-inside: avoid;
+    }
+
+    img {
+        max-width: 100% !important;
+    }
+
+    @page {
+        margin: 0.5cm;
+    }
+
+    p,
+    h2,
+    h3 {
+        orphans: 3;
+        widows: 3;
+    }
+
+    h2,
+    h3 {
+        page-break-after: avoid;
+    }
+}
+
+/************
+Year Counter
+************/
+.yearCount {
+    pointer-events: none;
+    position: absolute;
+    z-index: 99999;
+    visibility: hidden;
+    width: 42px;
+    height: 42px;
+    text-align: center;
+    color: white;
+    font-family: 'Knockout 29 A', 'Knockout 29 B';
+    /*text-shadow: 0 0 4px rgba(0,0,0,1);*/
+}
+.yearCount span {
+    font-size: 30px;
+}
+
+/************
+Pop up
+************/
+
+
+.infoContainer {
+    position: absolute;
+    visibility: hidden;
+    border: 1px solid #fff;
+    z-index: 999;   
+    box-shadow: 0 0 5px rgba(0,0,0,0.2);
+}
+.infoContainer:hover {
+    z-index: 1000;
+}
+
+/** arrowPosition: top left **/
+.infoContainer:before,
+.infoContainer:after {
+    display: block;
+    position: absolute;
+    left: 36px;
+    top: -8px;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 8px 8px 8px;
+    z-index: 2;
+}
+
+.infoContainer.centerTop:after,
+.infoContainer:after {
+    border-color: transparent transparent #ffffff transparent;
+    z-index: 1;
+    top: -9px;
+}
+/** arrowPosition: top right **/
+.infoContainer.onLeft:before,
+.infoContainer.onLeft:after {
+    left: auto;
+    right: 36px;
+    top: -8px;
+    border-width: 0 8px 8px 8px;
+}
+.infoContainer.onLeft:after {
+    top: -9px;
+}
+/** arrowPosition: rightCenter **/
+.infoContainer.onRight:before,
+.infoContainer.onRight:after {
+    left: -8px;
+    right: auto;
+    top: 15px;
+    border-width: 8px 8px 8px 0;
+}
+.infoContainer.onRight:after {
+    left: -9px;
+}
+/** arrowPosition: rightCenter **/
+.infoContainer.onLeftSide:before,
+.infoContainer.onLeftSide:after {
+    left: auto;
+    right: -8px;
+    top: 15px;
+    border-width: 8px 0 8px 8px;
+}
+.infoContainer.onLeftSide:after {
+    right: -9px;
+}
+
+/** arrowPosition: bottom left **/
+.infoContainer.onTop:before,
+.infoContainer.onTop:after {
+    left: 36px;
+    top: auto;
+    bottom: -8px;
+    border-width: 8px 8px 0 8px;
+}
+.infoContainer.onTop:after {
+    bottom: -9px;
+}
+/** arrowPosition: bottom right **/
+.infoContainer.onTop.onLeft:before,
+.infoContainer.onTop.onLeft:after {
+    left: auto;
+    right: 36px;
+    top: auto;
+    bottom: -8px;
+    border-width: 8px 8px 0 8px;
+}
+.infoContainer.onTop.onLeft:after {
+    bottom: -9px;
+}
+
+/** Pop Position: Center Top **/
+.infoContainer.centerTop:before,
+.infoContainer.centerTop:after {
+    left: 50%;
+    margin-left: -4px;
+    top: -8px;
+    border-width: 0 8px 8px 8px;
+}
+.infoContainer.centerTop:after {
+    top: -9px;
+}
+/** Pop Position: Center Bottom **/
+.infoContainer.centerBottom:before,
+.infoContainer.centerBottom:after {
+    left: 50%;
+    margin-left: -4px;
+    top: auto;
+    bottom: -8px;
+    border-width: 8px 8px 0 8px;
+}
+.infoContainer.centerBottom:after {
+    bottom: -9px;
+}
+
+
+/** arrowPosition: top right **/
+.infoContainer.onLeft:after {
+    border-color: transparent transparent #fff transparent;
+}
+/** arrowPosition: top right **/
+.infoContainer.onRight:after {
+    border-color: transparent #fff transparent transparent;
+}
+/** arrowPosition: top right **/
+.infoContainer.onLeftSide:after {
+    border-color: transparent transparent transparent #fff;
+}
+/** arrowPosition: bottom left **/
+.infoContainer.centerBottom:after,
+.infoContainer.onTop:after {
+    border-color: #fff transparent transparent transparent;
+}
+/** arrowPosition: bottom right **/
+.infoContainer.onTop.onLeft:after {
+    border-color: #fff transparent transparent transparent;
+}
+
+
+.infoContainer .contents {
+    color: #fff;
+    border-top: 1px solid #fff;
+    margin-bottom: -1px;
+}
+
+
+.infoContainer.twoCols {
+    width: 525px;
+}
+.infoContainer .colwrapper .contentsA {
+    border-right: 1px solid #fff;
+}
+.infoContainer .colwrapper .contentsA,
+.infoContainer .colwrapper .contentsB {
+    float: left;
+    width: 262px;
+}
+
+.infoContainer .contents .container {
+    width: 262px;
+    border-bottom: 1px solid #fff;
+}
+.infoContainer .contents .year {
+    clear: left;
+    font-size: 29px;
+    float: left;
+    width: 60px;
+    text-align: center;
+    font-family: 'Numbers Redbird A', 'Numbers Redbird B';
+    line-height: 1em;
+    padding-top: 6px;
+}
+.infoContainer .producion {
+    float: right;
+    width: 199px;
+    line-height: 0.8em;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    border-left: 1px solid #fff;
+}
+.infoContainer .contents .prod {
+    font-family: 'Knockout 50 A', 'Knockout 50 B';
+    font-size: 15px;
+    display: block;
+    text-transform: uppercase;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 4px;
+}
+.infoContainer .contents .role,  
+.infoContainer .contents .roleNonClick {
+    display: block;
+    font-size: 14px;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-family: 'Knockout 29 A', 'Knockout 29 B';
+}
+
+
+.infoContainer .contents .role {
+    text-decoration: underline;
+    cursor: pointer;    
+}
+.infoContainer .contents .role:hover {
+    color: #7570b3;
+}
+.infoContainer .title {
+    font-family: 'Knockout 50 A', 'Knockout 50 B';
+    padding: 5px 12px 5px 12px;
+    font-size: 34px;
+    color: white;
+}
+
+
+/** POP UP COLOR - ACTOR **/
+.infoContainer {
+    background-color: #e15a46;
+}
+/** arrowPosition: top left **/
+.infoContainer.centerTop:before,
+.infoContainer:before {
+    border-color: transparent transparent #e15a46 transparent;
+}
+/** arrowPosition: top right **/
+.infoContainer.onLeft:before {
+    border-color: transparent transparent #e15a46 transparent;
+}
+/** arrowPosition: leftCenter **/
+.infoContainer.onRight:before {
+    border-color: transparent #e15a46 transparent transparent;
+}
+
+/** arrowPosition: leftCenter **/
+.infoContainer.onLeftSide:before {
+    border-color: transparent transparent transparent #e15a46;
+}
+/** arrowPosition: bottom left **/
+.infoContainer.centerBottom:before,
+.infoContainer.onTop:before {
+    border-color: #e15a46 transparent transparent transparent;
+}
+/** arrowPosition: bottom right **/
+.infoContainer.onTop.onLeft:before {
+    border-color: #e15a46 transparent transparent transparent;
+}
+
+/** POP UP COLOR - PRODUCTION **/
+.infoContainer.production {
+    background-color: #e15a46;
+}
+/** arrowPosition: top left **/
+.infoContainer.production:before {
+    border-color: transparent transparent #e15a46 transparent;
+}
+/** arrowPosition: top right **/
+.infoContainer.production.onLeft:before {
+    border-color: transparent transparent #e15a46 transparent;
+}
+/** arrowPosition: bottom left **/
+.infoContainer.production.onTop:before {
+    border-color: #e15a46 transparent transparent transparent;
+}
+/** arrowPosition: bottom right **/
+.infoContainer.production.onTop.onLeft:before {
+    border-color: #e15a46 transparent transparent transparent;
+}
