@@ -782,7 +782,7 @@ Pop up
 }
 .infoContainer .contents .year {
     clear: left;
-    font-size: 29px;
+    font-size: 18px;
     float: left;
     width: 60px;
     text-align: center;
@@ -800,12 +800,12 @@ Pop up
 }
 .infoContainer .contents .prod {
     /*font-family: 'Knockout 50 A', 'Knockout 50 B';*/
-    font-size: 15px;
     display: block;
     text-transform: uppercase;
     padding-left: 10px;
     padding-right: 10px;
-    padding-top: 4px;
+    font-weight: bold;
+    line-height: normal;
 }
 .infoContainer .contents .role,  
 .infoContainer .contents .roleNonClick {
@@ -827,7 +827,8 @@ Pop up
 .infoContainer .title {
     /*font-family: 'Knockout 50 A', 'Knockout 50 B';*/
     padding: 5px 12px 5px 12px;
-    font-size: 34px;
+    font-size: 24px;
+    font-weight: bold;
     color: white;
     line-height: 1em;
 }
