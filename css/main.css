@@ -115,16 +115,18 @@ header {
 header h1 {
     margin: 0;
     font-size: 40px;
-    text-transform:uppercase;
+    /*text-transform:uppercase;
     font-family: 'Knockout 91 A', 'Knockout 91 B';
-    font-weight:normal;
+    font-weight:normal;*/
+    font-weight: bold;
     line-height:42px;
 } 
 header h2 {
     margin: 0;
     font-size: 18px;
-    font-weight: normal;
-    font-family: 'Knockout 31 A', 'Knockout 31 B';
+    /*font-weight: normal;
+    font-family: 'Knockout 31 A', 'Knockout 31 B';*/
+    font-weight: bold;
     width: 940px;
     line-height:20px;
 }
@@ -140,7 +142,7 @@ header #viewToggle * {
     float: left;
     font-size: 12px;
     font-weight: bold;
-    font-family: "Helvetica-Nue", "Helvetica";
+    font-family: "Helvetica-Nue", "Helvetica", Arial, sans-serif;
 }
 header #viewToggle .label {
     margin-right: 5px;
@@ -217,8 +219,8 @@ header #viewToggle .toggle.mode-production .production {
 #infoBox #about {
     background: rgba(238,238,238,0.95);
     border: 2px solid #ef4135;
-    font-family: 'Knockout 31 A', 'Knockout 31 B';
-    font-weight:normal;
+    /*font-family: 'Knockout 31 A', 'Knockout 31 B';
+    font-weight:normal;*/
     line-height:normal;
 
 }
@@ -230,8 +232,8 @@ header #viewToggle .toggle.mode-production .production {
 #infoBox .content h3 {
     margin: 0;
     font-size: 24px;
-    font-family: 'Knockout 91 A', 'Knockout 91 B';
-    font-weight: 400;
+    /*font-family: 'Knockout 91 A', 'Knockout 91 B';
+    font-weight: 400;*/
     font-style: normal;
 }
 #infoBox .content p {
@@ -275,7 +277,7 @@ header #viewToggle .toggle.mode-production .production {
     bottom: 55px;
     z-index: 999;
     width: 288px;
-    font-family: 'Knockout 29 A', 'Knockout 29 B';
+    /*font-family: 'Knockout 29 A', 'Knockout 29 B';*/
     -webkit-transition: all .4s ease;
     -moz-transition: all .4s ease;
     -ms-transition: all .4s ease;
@@ -596,7 +598,7 @@ Year Counter
     height: 42px;
     text-align: center;
     color: white;
-    font-family: 'Knockout 29 A', 'Knockout 29 B';
+    /*font-family: 'Knockout 29 A', 'Knockout 29 B';*/
     /*text-shadow: 0 0 4px rgba(0,0,0,1);*/
 }
 .yearCount span {
@@ -784,7 +786,7 @@ Pop up
     float: left;
     width: 60px;
     text-align: center;
-    font-family: 'Numbers Redbird A', 'Numbers Redbird B';
+    /*font-family: 'Numbers Redbird A', 'Numbers Redbird B';*/
     line-height: 1em;
     padding-top: 6px;
 }
@@ -797,7 +799,7 @@ Pop up
     border-left: 1px solid #fff;
 }
 .infoContainer .contents .prod {
-    font-family: 'Knockout 50 A', 'Knockout 50 B';
+    /*font-family: 'Knockout 50 A', 'Knockout 50 B';*/
     font-size: 15px;
     display: block;
     text-transform: uppercase;
@@ -811,7 +813,7 @@ Pop up
     font-size: 14px;
     padding-left: 10px;
     padding-right: 10px;
-    font-family: 'Knockout 29 A', 'Knockout 29 B';
+    /*font-family: 'Knockout 29 A', 'Knockout 29 B';*/
 }
 
 
@@ -823,7 +825,7 @@ Pop up
     color: #7570b3;
 }
 .infoContainer .title {
-    font-family: 'Knockout 50 A', 'Knockout 50 B';
+    /*font-family: 'Knockout 50 A', 'Knockout 50 B';*/
     padding: 5px 12px 5px 12px;
     font-size: 34px;
     color: white;
